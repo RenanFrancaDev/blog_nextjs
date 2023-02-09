@@ -13,12 +13,11 @@ getPosts = async () => {
 
 export const getPostBySlug = async (id) => {
 
-//     const {data} = await api.get(`/post?id=eq.${id}`)
+    const data = posts.map(post => post.id === id);
 
-//    if(data){
-//         return data;
+    if (data){
+        return data
+    }
+        return {title: 'Encontramos algum problema na requisição dos dados!'}
 
-//     }
-
-    return {}
-}
+    }

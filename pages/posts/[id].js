@@ -58,7 +58,7 @@ export default function PostPage({
   );
 }
 
-export const getServerSideProps = async ({ params }) => {
+﻿export const getServerSideProps = async ({ params }) => {
   const globalData = getGlobalData();
   const posts = await getPostBySlug(params.id);
  
@@ -70,4 +70,3 @@ export const getServerSideProps = async ({ params }) => {
     },
   };
 };
-
